@@ -41,7 +41,7 @@ if (isset($_POST['logout'])) {
                 }
             }
             ?>
-            <h3>$ <?php echo number_format($total_pendings, 2); ?>/-</h3>
+            <h3>₹ <?php echo number_format($total_pendings, 2); ?></h3>
             <p>Total Pending</p>
         </div>
 
@@ -56,7 +56,7 @@ if (isset($_POST['logout'])) {
                 }
             }
             ?>
-            <h3>$ <?php echo number_format($total_completes, 2); ?>/-</h3>
+            <h3>₹ <?php echo number_format($total_completes, 2); ?></h3>
             <p>Total Completed</p>
         </div>
 
