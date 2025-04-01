@@ -15,22 +15,55 @@ if (isset($_POST['logout'])) {
     exit();
 }
 
-    //add products to database
-    if (isset($_POST['add_product'])) {
-        $product_name = mysqli_real_escape_string($conn, $_POST['name']);
-        $product_price = mysqli_real_escape_string($conn, $_POST['price']);
-        $product_detail = mysqli_real_escape_string($conn, $_POST['detail']);
-        $image = $_FILES['image']['name'];
-        $image = $_FILES['image']['name'];
-        $image = $_FILES['image']['name'];
+//add products to database
+if (isset($_POST['add_product'])) {
+    $product_name = mysqli_real_escape_string($conn, $_POST['name']);
+    $product_price = mysqli_real_escape_string($conn, $_POST['price']);
+    $product_detail = mysqli_real_escape_string($conn, $_POST['detail']);
+    $image = $_FILES['image']['name'];
+    $image_size = $_FILES['image']['size'];
+    $image_tmp_name = $_FILES['image']['tmp_name'];
+    $image_folder = 'image/';
 
-
+    // Create image directory if it doesn't exist
+    if (!file_exists($image_folder)) {
+        mkdir($image_folder, 0777, true);
     }
+
+    // Generate unique filename
+    $image_name = uniqid() . '_' . $image;
+    $image_path = $image_folder . $image_name;
+
+    $select_product_name = mysqli_query($conn, "SELECT * FROM `products` WHERE name = '$product_name'") or die('Query failed:');
+    if (mysqli_num_rows($select_product_name) > 0) {
+        $message[] = 'product already exists!';
+    } else {
+        if ($image_size > 2000000) {
+            $message[] = 'image size is too large! Maximum size is 2MB';
+        } else {
+            if (move_uploaded_file($image_tmp_name, $image_path)) {
+                $insert_product = mysqli_query($conn, "INSERT INTO `products`(`name`, `price`, `product_detail`, `image`) VALUES('$product_name', '$product_price', '$product_detail', '$image_name')") or die('Query failed:');
+                if ($insert_product) {
+                    $message[] = 'product added successfully!';
+                    header('location:admin_product.php');
+                } else {
+                    $message[] = 'Failed to add product to database!';
+                    unlink($image_path); // Remove uploaded image if database insert fails
+                }
+            } else {
+                $message[] = 'Failed to upload image!';
+            }
+        }
+    }
+}
+
+
+
 ?>
 
 <style type="text/css">
-    <?php 
-        include 'style.css';
+    <?php
+    include 'style.css';
     ?>
 </style>
 
@@ -48,17 +81,17 @@ if (isset($_POST['logout'])) {
 <body>
     <?php include 'admin_header.php'; ?>
 
-    <?php 
+    <?php
     if (isset($message)) {
         foreach ($message as $msg) { // Changed variable name to avoid overwriting
             echo '
                 <div class="message">
-                    <span>'.$msg.'</span>
+                    <span>' . $msg . '</span>
                     <i class="bi bi-x-circle" onclick="this.parentElement.remove()"></i>
                 </div>
             ';
         }
-    }    
+    }
     ?>
 
     <div class="line2"></div>
@@ -85,15 +118,58 @@ if (isset($_POST['logout'])) {
                 <input type="file" name="image" accept="image/jpg, image/jpeg, image/png, image/webp" required>
             </div>
 
-            <input type="submit" name="add_product" value="Add Product" class="btn">
+            <input type="submit" name="add_product" value="add product" class="btn">
         </form>
     </section>
-    
     <div class="line3"></div>
+    <div class="line4"></div>
+    <section class="show-products">
+        <div class="box-container">
+            <?php
+            $select_products = mysqli_query($conn, "SELECT * FROM `products`") or die('Query failed:');
+            if (mysqli_num_rows($select_products) > 0) {
+                while ($fetch_products = mysqli_fetch_assoc($select_products)) {
+            ?>
+                    <div class="box">
+                        <div class="image-container">
+                            <?php 
+                                $img_path = "image/" . $fetch_products['image'];
+                                if (file_exists($img_path) && is_file($img_path)) {
+                                    echo '<img src="' . $img_path . '" alt="' . $fetch_products['name'] . '">';
+                                } else {
+                                    echo '<div class="no-image">No image available</div>';
+                                }
+                            ?>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><?php echo $fetch_products['name']; ?></h3>
+                            <p class="product-price">$<?php echo $fetch_products['price']; ?></p>
+                            <details class="product-details">
+                                <summary>Product Details</summary>
+                                <p><?php echo $fetch_products['product_detail']; ?></p>
+                            </details>
+                            <div class="action-buttons">
+                                <a href="admin_product.php?edit=<?php echo $fetch_products['id']; ?>" class="edit">Edit</a>
+                                <a href="admin_product.php?delete=<?php echo $fetch_products['id']; ?>" class="delete" onclick="return confirm('are you sure you want to delete this product?');">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                }
+            } else {
+                echo '
+                    <div class="empty">
+                        <p>no products added yet!</p>
+                    </div>
+                ';
+            }
+            ?>
+        </div>
+    </section>
+
 
     <script type="text/javascript" src="script.js"></script>
 
 </body>
 
 </html>
- 
