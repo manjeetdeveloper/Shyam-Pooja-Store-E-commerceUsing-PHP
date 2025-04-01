@@ -58,6 +58,20 @@ if (isset($_POST['add_product'])) {
 }
 
 
+//delete products to database
+if (isset($_GET['delete'])) {
+    $delete_id = $_GET['delete'];
+    $select_delete_image = mysqli_query($conn, "SELECT image FROM `products` WHERE id = '$delete_id'") or die('Query failed:');
+
+    $fetch_delete_image = mysqli_fetch_assoc($select_delete_image);
+    unlink('/image/' . $fetch_delete_image['image']);
+
+    mysqli_query($conn, "DELETE FROM `products` WHERE id = '$delete_id'") or die('Query failed:');
+    mysqli_query($conn, "DELETE FROM `cart` WHERE pid = '$delete_id'") or die('Query failed:');
+    mysqli_query($conn, "DELETE FROM `wishlist` WHERE id = '$delete_id'") or die('Query failed:');
+
+    header('location:admin_product.php');
+}
 
 ?>
 
@@ -132,13 +146,13 @@ if (isset($_POST['add_product'])) {
             ?>
                     <div class="box">
                         <div class="image-container">
-                            <?php 
-                                $img_path = "image/" . $fetch_products['image'];
-                                if (file_exists($img_path) && is_file($img_path)) {
-                                    echo '<img src="' . $img_path . '" alt="' . $fetch_products['name'] . '">';
-                                } else {
-                                    echo '<div class="no-image">No image available</div>';
-                                }
+                            <?php
+                            $img_path = "image/" . $fetch_products['image'];
+                            if (file_exists($img_path) && is_file($img_path)) {
+                                echo '<img src="' . $img_path . '" alt="' . $fetch_products['name'] . '">';
+                            } else {
+                                echo '<div class="no-image">No image available</div>';
+                            }
                             ?>
                         </div>
                         <div class="product-info">
