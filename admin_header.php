@@ -34,18 +34,10 @@
 
             <!-- User Information -->
             <div class="user-box">
-                <strong><p>Username: <span><?php echo $_SESSION['admin_name']; ?></span></p></strong>
-                <strong><p>Email: <span><?php 
-                    include 'connection.php';
-                    $admin_id = $_SESSION['admin_id'];
-                    $select_admin = mysqli_query($conn, "SELECT email FROM users WHERE id = '$admin_id'") or die('Query failed');
-                    if(mysqli_num_rows($select_admin) > 0) {
-                        $row = mysqli_fetch_assoc($select_admin);
-                        echo $row['email'];
-                    }
-                ?></span></p></strong>
-                <form method="post">
-                    <button type="submit" name="logout" class="logout-btn">LOG OUT</button>
+                <p>Username: <span><?php echo $_SESSION['admin_name']; ?></span></p>
+                <p>Email: <span><?php echo $_SESSION['admin_email']; ?></span></p>
+                <form method="post" action="">
+                    <button type="submit" name="logout" class="delete-btn">Logout</button>
                 </form>
             </div>
         </div>
@@ -62,5 +54,39 @@
     <div class="line"></div>
 
     <script src="script.js"></script>
+    <script>
+        // Handle header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Handle user box toggle
+        const userBtn = document.querySelector('#user-btn');
+        const userBox = document.querySelector('.user-box');
+        
+        userBtn.addEventListener('click', function() {
+            userBox.classList.toggle('active');
+        });
+
+        // Close user box when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!userBtn.contains(e.target) && !userBox.contains(e.target)) {
+                userBox.classList.remove('active');
+            }
+        });
+
+        // Handle mobile menu
+        const menuBtn = document.querySelector('#menu-btn');
+        const navbar = document.querySelector('.navbar');
+        
+        menuBtn.addEventListener('click', function() {
+            navbar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

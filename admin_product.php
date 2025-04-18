@@ -130,59 +130,53 @@ if(isset($_POST['update_product'])) {
             --orange: #ff6b35;
             --dark-orange: #e85a2c;
             --light-orange: rgba(255, 107, 53, 0.1);
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         .show-products {
-            padding: 3rem;
-            background: var(--orange);
+            padding: 2rem;
             min-height: 100vh;
+            background: #f8f9fa;
         }
 
         .box-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            width: 100%;
-            max-width: 1600px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .box {
-            background: #ffffff;
-            border-radius: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-height: 600px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
         }
 
         .image-container {
-            width: 100%;
-            height: 450px;
+            height: 250px;
+            background: #f8f9fa;
             position: relative;
             overflow: hidden;
-            background: #f8f9fa;
         }
 
         .image-container img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             transition: transform 0.5s ease;
-            padding: 1rem;
         }
 
         .box:hover .image-container img {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         .no-image {
@@ -190,44 +184,38 @@ if(isset($_POST['update_product'])) {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--light-orange);
-            color: var(--orange);
-            font-size: 1.2rem;
-            font-weight: 500;
+            color: #6c757d;
+            font-size: 0.9rem;
+            background: #f8f9fa;
         }
 
         .product-info {
-            padding: 2rem;
-            background: #ffffff;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
         }
 
         .product-name {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            line-height: 1.3;
+            color: #2d3436;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .product-price {
-            font-size: 1.8rem;
-            color: var(--orange);
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            color: var(--orange);
+            margin-bottom: 1rem;
         }
 
         .product-price::before {
             content: '₹';
-            font-size: 1.4rem;
-            color: #666;
+            font-size: 1.2rem;
+            color: var(--orange);
+            font-weight: 600;
         }
 
         .product-details {
@@ -236,48 +224,42 @@ if(isset($_POST['update_product'])) {
         }
 
         .product-details summary {
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1.2rem;
             background: var(--light-orange);
             color: var(--orange);
-            border-radius: 10px;
+            border-radius: 8px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
         }
 
         .product-details summary:hover {
-            background: var(--orange);
-            color: white;
+            background: rgba(255, 107, 53, 0.2);
         }
 
         .product-details p {
-            padding: 1.5rem;
+            padding: 1rem;
             color: #666;
-            line-height: 1.8;
-            font-size: 1.1rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            background: rgba(248, 249, 250, 0.5);
+            border-radius: 8px;
             margin-top: 0.5rem;
-            background: #f8f9fa;
-            border-radius: 10px;
         }
 
         .action-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: auto;
-            padding-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
         }
 
         .action-buttons a {
-            padding: 1rem 2rem;
-            text-align: center;
-            border-radius: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .action-buttons .edit {
@@ -295,63 +277,29 @@ if(isset($_POST['update_product'])) {
         .action-buttons .edit:hover {
             background: var(--dark-orange);
             border-color: var(--dark-orange);
-            transform: translateY(-2px);
         }
 
         .action-buttons .delete:hover {
             background: #dc3545;
             color: white;
-            transform: translateY(-2px);
         }
 
         .empty {
-            grid-column: 1 / -1;
             text-align: center;
-            padding: 4rem;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #6c757d;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            margin: 2rem auto;
+            max-width: 500px;
         }
 
-        .empty p {
-            font-size: 1.4rem;
-            color: #666;
-            margin: 0;
-        }
-
-        @media (max-width: 1400px) {
+        @media (max-width: 991px) {
             .box-container {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 0 2rem;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .show-products {
-                padding: 2rem;
-            }
-
-            .box {
-                min-height: 550px;
-            }
-
-            .image-container {
-                height: 400px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .box-container {
-                grid-template-columns: 1fr;
-                max-width: 800px;
-            }
-
-            .box {
-                min-height: 500px;
-            }
-
-            .image-container {
-                height: 350px;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                padding: 1rem;
             }
         }
 
@@ -360,33 +308,29 @@ if(isset($_POST['update_product'])) {
                 padding: 1rem;
             }
 
-            .box-container {
-                padding: 1rem;
-                gap: 2rem;
-            }
-
             .box {
-                min-height: 450px;
+                max-width: 400px;
+                margin: 0 auto;
             }
 
             .image-container {
-                height: 300px;
+                height: 220px;
             }
 
             .product-info {
-                padding: 1.5rem;
+                padding: 1.2rem;
             }
 
             .product-name {
-                font-size: 1.6rem;
+                font-size: 1.1rem;
             }
 
             .product-price {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             .action-buttons a {
-                padding: 0.8rem 1.5rem;
+                padding: 0.6rem 1.2rem;
                 font-size: 0.9rem;
             }
         }

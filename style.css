@@ -31,6 +31,7 @@ ul {
 }
 .title h1 {
   font-size: 3rem;
+  text-transform: uppercase;
 }
 .title span {
   font-size: 1.2rem;
@@ -63,7 +64,8 @@ ul {
     margin-bottom: 7rem;
 }
 
-.message {
+.message,
+.empty {
     text-align: center;
     text-transform: capitalize;
     margin: 0 auto;
@@ -77,13 +79,21 @@ ul {
     color: #fff;
 
 }
+
 .message i {
     cursor: pointer;
+}
 
+.empty {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 input,
 button,
-textarea {
+textarea,
+select {
     outline: none;
     border: 1px solid #55555544;
     background: transparent;
@@ -98,6 +108,24 @@ button{
 input[type=submit]{
     cursor: pointer;
 }
+.delete-btn {
+  display: inline-block;
+  background-color: #ffc107; 
+  color: #000; 
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #e0a800; /* Slightly darker on hover */
+}
+
 
 /* ----form container----------- */
 .form-container {
@@ -109,26 +137,26 @@ input[type=submit]{
    min-height: 100vh;
 
 }
-.form-container::before{
-    content: '';
-    position: absolute;
-    background: url('img/corner.png');
-    top: -5%;
-    left: -10px;
-    width: 280px;
-    height: 700px;
-    background-size: 255px;
-    background-repeat: no-repeat;
-    z-index: 100;
+.form-container::before {
+  content: '';
+  position: absolute;
+  background: url(img/Ram.png);
+  top: -5%;
+  left: -136px;
+  width: 362px;
+  height: 698px;
+  background-size: 474px;
+  background-repeat: no-repeat;
+  z-index: 100;
 }
 .form-container::after {
     content: '';
     position: absolute;
-    background: url('img/gheecorner.png');
+    background: url('img/sit- black-hanuman.png');
     bottom: 0;
     right: 0;
     width: 280px;
-    height: 260px;
+    height: 420px;
     background-size: 255px;
     background-repeat: no-repeat;
     z-index: 1;
@@ -171,194 +199,155 @@ input[type=submit]{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px; 
-  padding: 0 20px;
-  background-color: var(--orange); 
+  height: 65px;
+  padding: 0 2.5rem;
+  background-color: var(--orange);
   position: fixed;
-  transition: background 0.3s ease-in-out ;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
-
-.header.scrolled .navbar a {
-  color: black !important;
-}
-
-.header.scrolled .icons i {
-  color: black !important;
-}
 .header.scrolled {
-  background-color: #fff !important; 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #fff;
 }
-.header .icons i {
-  margin-right: 1.2rem;
-  font-style: 1.5rem;
-  cursor: pointer;
+
+.header.scrolled .navbar a,
+.header.scrolled .icons i {
   color: #000;
 }
 
-.banner {
-  background: var(--orange); 
+.header.scrolled .navbar a:hover,
+.header.scrolled .icons i:hover {
+  color: var(--orange);
+}
+
+.header .flex {
   width: 100%;
-  height: 50vh; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 50px; 
-}
-.banner ::before {
-  position: absolute;
-  content: '';
-  bottom: 30%;
-  right: 0;
-  background-image: url('img/backgroundii.png');
-  background-repeat: no-repeat;
-  width: 600px;
-  height: 400px;
-  background-size: 500px;
-}
-
-
-.banner h1 {
-  font-size: 4.7rem;
-  color: #fff;
-}
-
-.banner p {
-  font-size: 1.2rem;
-  color: #000;
-  margin-top: 0.5rem;
-}
-
-.flex {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
 }
 
-.navbar {
+/* Logo */
+.header .logo {
+  height: 55px;
   display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   align-items: center;
-  flex-grow: 1;
-  justify-content: center;
-}
-.navbar a {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: black;
-  font-weight: bold;
-  padding: 10px;
+  padding: 5px 0;
 }
 
-
-/* Navbar Links */
-.navbar a:hover {
-  color: #fff;
-}
-
-.logo {
-  /* display: flex; */
-  position: relative;
-  top: 10;
-  left: 10px; 
-  width: 100px;
-}
-
-.logo img {
-  width: 130%;
+.header .logo img {
+  height: 282%;
+  width: 180px;
   object-fit: contain;
 }
 
-/* User Info */
-.user-box {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: #fff8e5;
-  border: 2px solid #6fe600;
-  border-radius: 10px;
-  width: 300px; 
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-.user-box p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333; 
-}
-
-.user-box span {
-  font-weight: normal;
-  color: #555; 
-}
-
-.logout-btn {
-  background: #000; 
-  color: #fff; 
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 8rem;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
-}
-
-.logout-btn:hover {
-  background: #fcc927; 
-  color: #000; 
-}
-.icons {
-  display: grid;
+/* Navigation */
+.header .navbar {
+  display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 2rem;
+  margin-left: 2rem;
 }
-#menu-btn {
-  display: none;
-  
+
+.header .navbar a {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+  color: #fff;
+}
+
+/* Icons */
+.header .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .header .icons i {
-  margin-right: 1.2rem;
-  font-size: 1.5rem;
-  cursor: pointer;
+  font-size: 1.4rem;
   color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.header .user-box {
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    text-align: center;
-    width: 20rem;
-    display: none; 
-    transition: all 0.3s ease;
-}
-.logout-btn{
-  background: #000;
+.header .icons i:hover {
   color: #fff;
-  text-transform: uppercase;
-  width: 10rem;
-  border-radius: 4px;
+  transform: scale(1.1);
 }
-.header .user-box.active {
-  display: block; 
+
+/* User Box */
+.user-box {
+  position: absolute;
+  top: 65px;
+  right: 2rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
+  width: 250px;
+  display: none;
+  z-index: 1001;
 }
+
+.user-box.active {
+  display: block;
+}
+
+.user-box p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.user-box p span {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.user-box .delete-btn {
+  margin-top: 1rem;
+}
+
+#menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 /* -------------------- Admin Dashboard ------------------ */
 .dashboard {
   background: var(--orange);
@@ -370,15 +359,17 @@ input[type=submit]{
 .dashboard::before {
   position: absolute;
   content: '';
-  top: -40%; 
-  left: -50px;
-  background-image: url('img/backgroundii.png');
+  top: -28%;
+  left: -10px;
+  background-image: url(img/stand-Ram.png);
   background-repeat: no-repeat;
-  width: 450px;
-  height: 370px;
+  width: 452px;
+  height: 371px;
   background-size: contain;
   z-index: 0;
 }
+
+
 
 .box-container {
   padding: 2% 8%;
@@ -394,6 +385,9 @@ input[type=submit]{
   text-align: center;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
+}
+.box-container .box p{
+  margin-top: 3rem;
 }
 
 .box-container .box:hover {
@@ -421,18 +415,28 @@ input[type=submit]{
   background: #fff;
   position: relative;
 }
-.show-products{
+/* .show-products{
   margin-top: -3.5rem;
-  /* height: 10px; */
+  height: 10px;
   background: var(--orange);
   position: relative;
+} */
+
+
+.show-products ,
+.message-container,
+.order-container{
+    position: relative;
+    background: var(--orange);
+    margin-top: -3.5rem;
 }
-.show-products::before{
+.show-products::before,
+.order-container::before{
   position: absolute;
   content: '';
   top: -100px; 
   left: -50px;
-  background-image: url('img/gheecorner.png');
+  background-image: url('img/black-hanuman.png');
 }
 .show-products .box-container{
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -456,26 +460,26 @@ input[type=submit]{
   margin-top: 1rem;
 }
 
-.show-products {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* .show-products {
+  padding: 2rem;
+  max-width: 1490px;
+  margin: 0 auto;
+} */
 
 .show-products .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     gap: 2rem;
     justify-content: center;
     padding: 2rem 0;
 }
 
-.show-products .box-container .box {
-    background: #fff;
+/* .show-products .box-container .box {
+    background: #f8d124;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-}
+} */
 
 .show-products .box-container .box .image-container {
     position: relative;
@@ -519,19 +523,9 @@ input[type=submit]{
 
 /* Style for price input fields */
 input[type="number"][name="price"] {
-    font-size: 1.1rem;
-    padding: 0.8rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
+    -moz-appearance: textfield;
 }
 
-input[type="number"][name="price"]::placeholder {
-    color: #999;
-    font-size: 0.9rem;
-}
-
-/* Remove spinner buttons from number input */
 input[type="number"][name="price"]::-webkit-inner-spin-button,
 input[type="number"][name="price"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -637,6 +631,174 @@ input[type="number"][name="price"] {
 }
 
 
+.message-container .title,
+.order-container .title {
+  text-transform: uppercase;
+  padding-top: 3rem;
+}
+.order-container {
+  padding: 3% 7%;
+}
+.order-container .box-container{
+  grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+  justify-content: center;
+  align-items: flex-start;
+}
+.box-container .box{
+  text-align: center;
+  padding: 1rem 2rem;
+}
+  
+  .order-container .box p{
+  margin-bottom: .5rem;
+  text-transform: capitalize;
+  color: hotpink;
+ 
+}
+
+.order-container .box span{
+color: #555;
+}
+
+.order-container form{
+text-align: center;
+}
+
+.order-container form select{
+width: 100%;
+margin: 1rem auto;
+padding: .5rem 0;
+cursor: pointer;
+border-radius: 3px;
+
+}
+
+.order-container form input {
+  width: 40%;
+  border-radius: unset;
+  border: none;
+  background: var(--orange);
+  color: #000;
+  text-transform: capitalize;
+  
+}
+.order-container form input:hover,
+.order-container .box .delete:hover {
+  color: #fff;
+  background: #000;
+}
+.order-container .box .delete {
+  padding: .7rem 4rem;
+}
+
+/* Banner */
+.banner {
+  margin-top: 65px;
+  padding: 3rem 2rem;
+  background: var(--orange);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  background: url(img/Ram.png);
+  top: -20px;
+  right: 50px;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 1;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  background: url('img/sit-black-hanuman.png');
+  bottom: -50px;
+  left: 50px;
+  width: 250px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 1;
+}
+
+.banner .detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.banner .detail h1 {
+  font-size: 2.8rem;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.banner .detail p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.line {
+  height: 100px;
+  background-image: url('img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-top: -3.6rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin-top: 70px;
+    padding: 3rem 1.5rem;
+    min-height: 250px;
+  }
+
+  .banner::before {
+    width: 250px;
+    height: 450px;
+    background-size: 250px;
+    top: -150px;
+    left: -80px;
+  }
+
+  .banner::after {
+    width: 200px;
+    height: 300px;
+    background-size: 200px;
+    bottom: -50px;
+    right: -30px;
+  }
+
+  .banner .detail {
+    padding: 1rem 0;
+  }
+
+  .banner .detail h1 {
+    font-size: 2rem;
+  }
+
+  .banner .detail p {
+    font-size: 1rem;
+  }
+}
+
 /* --------------------media screen ------------------ */
 @media (max-width: 958px) {
   .header {
@@ -660,5 +822,8 @@ input[type="number"][name="price"] {
 
   .header .user-box.active {
       display: block; 
+  }
+  .header .icons #menu-btn {
+    display: block;
   }
 }
