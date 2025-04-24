@@ -68,7 +68,7 @@ if (isset($_GET['delete'])) {
 
     mysqli_query($conn, "DELETE FROM `products` WHERE id = '$delete_id'") or die('Query failed:');
     mysqli_query($conn, "DELETE FROM `cart` WHERE pid = '$delete_id'") or die('Query failed:');
-    mysqli_query($conn, "DELETE FROM `wishlist` WHERE id = '$delete_id'") or die('Query failed:');
+    mysqli_query($conn, "DELETE FROM `wishlist` WHERE pid = '$delete_id'") or die('Query failed:'); // here id = pid
 
     header('location:admin_product.php');
 }
