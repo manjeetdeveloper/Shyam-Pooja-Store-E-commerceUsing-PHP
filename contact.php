@@ -146,7 +146,35 @@ if (isset($_POST['submit-btn'])) {
             </div>
         </div>
     </div>
+
+    
     <div class="line3"></div>
+
+    <div class="webyroot-section">
+        <h1 class="webyroot-title">We are always ready to help you</h1>
+        <p class="webyroot-desc">At WebyRoot, we're always here to assist you with any sales inquiries, partnership opportunities, or career-related questions you may have. Our team of experts is dedicated to providing exceptional customer service and support, ensuring that you receive prompt and helpful responses to your inquiries.</p>
+        
+        <div class="webyroot-cards">
+            <div class="webyroot-card">
+                <i class="bi bi-briefcase-fill"></i>
+                <h3>Sales Inquiry</h3>
+                <p>Get in touch with WebyRoot for all your sales inquiries. Our expert team is ready to assist you with customized solutions to meet your business needs.</p>
+            </div>
+
+            <div class="webyroot-card">
+                <i class="bi bi-people-fill"></i>
+                <h3>Partnership</h3>
+                <p>Explore partnership opportunities with WebyRoot and discover how we can help you expand your business. Our team is committed to building strong and lasting relationships.</p>
+            </div>
+
+            <div class="webyroot-card">
+                <i class="bi bi-person-workspace"></i>
+                <h3>Career</h3>
+                <p>Join the WebyRoot team and take your career to the next level. We offer a supportive and dynamic work environment that fosters growth and creativity.</p>
+            </div>
+        </div>
+    </div>
+
     <?php include 'footer.php'; ?>
     <script type="text/javascript" src="script.js"></script>
 </body>

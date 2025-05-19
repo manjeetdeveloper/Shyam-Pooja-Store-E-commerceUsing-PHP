@@ -147,7 +147,7 @@ if (isset($_GET['delete_all'])) {
         <div class="wishlist_total">
             <p>total amount payable : <span>₹<?php echo $grand_total; ?>/-</span> </p>
             <a href="shop.php" class="btn">continue shopping</a>
-            <a href="checkout.php" class="btn<?php echo ($grand_total)?'':'disabled'?>" onclick="return confirm('do you want to delete all items in your wishlist')">proceed to checkout</a>
+            <a href="checkout.php" class="btn<?php echo ($grand_total)?'':'disabled'?>" onclick="return confirm('do you want to go proceed to checkout')">proceed to checkout</a>
 
         </div>
     </section>

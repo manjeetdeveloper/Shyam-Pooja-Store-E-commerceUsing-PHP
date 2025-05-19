@@ -72,6 +72,7 @@ if (isset($_POST['update_order'])) {
         <h1 class="title">total order placed</h1>
         <div class="box-container">
             <?php
+            
             $select_order = mysqli_query($conn, "SELECT * FROM `order`") or die('Query Failed');
 
             if (mysqli_num_rows($select_order) > 0) {

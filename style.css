@@ -374,12 +374,12 @@ input[type=submit]{
  .box-container {
   padding: 2% 8%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 4.5rem; 
 }
 
 .box-container .box {
-  background: #fff;
+  background: #ffc0c0;
   box-shadow: var(--box-shadow);
   padding: 2rem;
   text-align: center;
@@ -674,7 +674,7 @@ border-radius: 3px;
 }
 
 .order-container form input {
-  width: 40%;
+  width: 69%;
   border-radius: unset;
   border: none;
   background: var(--orange);

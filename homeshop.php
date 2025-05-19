@@ -45,8 +45,8 @@
                         <input type="hidden" name="product_quantity" value="1">
                         <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
                         <div class="icon">
-                            <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="bi bi-eye-fill"></a>
                             <button type="submit" name="add_to_wishlist" class="bi bi-heart"></button>
+                            <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="bi bi-eye-fill"></a>
                             <button type="submit" name="add_to_cart" class="bi bi-cart"></button>
                         </div>
                     </form>

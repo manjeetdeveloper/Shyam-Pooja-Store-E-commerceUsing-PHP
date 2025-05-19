@@ -85,6 +85,8 @@ if (isset($_POST['add_to_cart'])) {
 
     <!-- --------------------slick slider link ----------------------------------------------------- -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>home page</title>
 </head>
 
@@ -95,8 +97,8 @@ if (isset($_POST['add_to_cart'])) {
     <div class="container-fluid">
         <div class="hero-slider">
             <div class="slider-item">
-                <img src="img/download (3).jpeg" alt="slider image error">
-                <div class="slider-caption">
+                <img src="img/Banneragar.webp" alt="slider image error">
+                <!-- <div class="slider-caption">
                     <span>Test the Quality</span>
                     <h1>Organic Premium <br>Pooja</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -104,7 +106,7 @@ if (isset($_POST['add_to_cart'])) {
                         nesciunt rerum animi?
                     </p>
                     <a href="shop.php" class="btn">shop now</a>
-                </div>
+                </div> -->
             </div>
 
             <div class="slider-item">
@@ -126,6 +128,71 @@ if (isset($_POST['add_to_cart'])) {
         </div>
     </div>
     <div class="line"></div>
+    <div class="quality-services">
+        <h1 class="title">Quality Services</h1>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-shield-check"></i> 
+                </div>
+                <h3>Pure and Authentic Products</h3>
+                <ul>
+                    <li>Certified and Lab-Tested Products</li>
+                    <li>100% Natural Ingredients</li>
+                    <li>Handpicked by Experts</li>
+                    <li>Sourced from Trusted Vendors</li>
+                    <li>No Artificial Fragrance or Colors</li>
+                    <li>Fresh Stock Only</li>
+
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                <i class="bi bi-currency-rupee"></i>
+                </div>
+                <h3>Affordable Pricing</h3>
+                <ul>
+                    <li>Best Price Guarantee</li>
+                    <li>No Hidden Charges</li>
+                    <li>Combo Offers & Discounts</li>
+                    <li>Festival Sale Offers</li>
+                    <li>Value for Money Products</li>
+                    <li>Free Delivery on Minimum Order</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                <i class="bi bi-truck"></i>
+                </div>
+                <h3>Fast and Safe Delivery</h3>
+                <ul>
+                    <li>Pan-India Delivery Network</li>
+                    <li>Same-Day or Next-Day Dispatch</li>
+                    <li>Real-Time Order Tracking</li>
+                    <li>Delivery Updates via SMS/Email</li>
+                    <li>Free Delivery on Eligible Orders</li>
+                    <li>Trusted Courier Partners</li>
+
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bi bi-cart-check"></i>
+                </div>
+                <h3>Secure Online Payments</h3>
+                <ul>
+                    <li>Multiple Payment Options(UPI,Net BAnking)</li>
+                    <li>Razorpay / Paytm / Stripe Integration</li>
+                    <li>One-Click Checkout Process</li>
+                    <li>No Data Sharing with Third Parties</li>
+                    <li>Cash on Delivery (COD) Available</li>
+                    <li>100% Payment Protection Guarantee</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="services">
         <div class="row">
             <div class="box">
@@ -258,6 +325,20 @@ if (isset($_POST['add_to_cart'])) {
     <?php include 'homeshop.php'; ?>
     <div class="line2"></div>
 
+    <div class="promo-container">
+    <div class="promo-card">
+      <div class="promo-image"></div>
+      <div class="promo-content">
+        <span>Fill your space with serenity and positivity</span>
+        <h2>Explore Agarbattis</h2>
+        <p><strong>Hari Darshan Agarbatti</strong> fills your space with a divine fragrance, ideal for <strong>meditation</strong>, <strong>prayers</strong>, and creating a peaceful, spiritual ambiance. Made with natural ingredients, it enhances <strong>positivity</strong>, tranquility, and serenity in your home or temple.</p>
+        <button class="shop-btn">Shop Now</button>
+      </div>
+    </div>
+  </div>
+    
+    
+   
     <div class="newslatter">
         <h1 class="title">Join Our To Newslatter</h1>
         <p>Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more.
