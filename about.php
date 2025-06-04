@@ -260,9 +260,223 @@ if (isset($_POST['logout'])) {
             </div>
         </div>
     </div>
-    <div class="line"></div>
+
+
+    <div class="Poshanheader">
+        <div class="slanted-section">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+
+        <div class="faq-container">
+            <div class="sidebarr">
+                <ul>
+                    <li data-category="beneficiary" class="active"><strong>Basic Q&A</strong></li>
+                    <li data-category="awc">Step-by-Step Format</li>
+                    <li data-category="officials">Troubleshooting Format</li>
+                    <li data-category="poshan">Yes/No Format</li>
+                    <li data-category="misc">Do's and Don'ts Format</li>
+                </ul>
+            </div>
+
+            <div class="faq-content">
+                <!-- Beneficiary Questions -->
+                <div class="faq-category active" id="beneficiary">
+                    <details>
+                        <summary>What is the Pooja Store app?</summary>
+                        <p>Pooja Store is an online platform where you can easily buy pooja items, spiritual products, idols, and more from the comfort of your home.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need to create an account to place an order?</summary>
+                        <p>Yes, creating an account helps you track orders, save addresses, and access your wishlist. It's quick and simple to sign up.</p>
+                    </details>
+                    <details>
+                        <summary>Is the Pooja Store app free to use?</summary>
+                        <p>Yes, the app is completely free to download and use. You only pay for the products you purchase.</p>
+                    </details>
+                    <details>
+                        <summary>How can I contact customer support?</summary>
+                        <p>You can reach our support team via the “Contact Us” section in the app or email us at support@poojastore.com.</p>
+                    </details>
+                    <details>
+                        <summary>Are my payment details safe on the app?</summary>
+                        <p>Absolutely. We use secure payment gateways and encryption to protect your payment and personal information.</p>
+                    </details>
+                </div>
+
+                <!-- AWC Users Questions -->
+                <div class="faq-category" id="awc">
+                    <details>
+                        <summary>How to place an order on the Pooja Store app?</summary>
+                        <p>
+                        <ul>
+                            <li>Step 1: Open the Pooja Store app and log in.</li>
+                            <li>Step 2: Browse products by category or search directly.</li>
+                            <li>Step 3: Click on a product to view details.</li>
+                            <li>Step 4: Tap “Add to Cart.”</li>
+                            <li>Step 5: Go to Cart → Proceed to Checkout → Choose payment method → Confirm order.</li>
+                        </ul>
+                        You’ll receive an order confirmation via email/SMS.</p>
+                    </details>
+                    <details>
+                        <summary>How to track my order?</summary>
+                        <p>
+                        <ul>
+                            <li>Step 1: Open the app and go to the menu.</li>
+                            <li>Step 2: Click on “My Orders.”</li>
+                            <li>Step 3: Select the recent order you want to track</li>
+                            <li>Step 4: View real-time status (Packed, Shipped, Delivered).</li>
+                            <li>Step 5: You will also get tracking updates via SMS/email.</li>
+                        </ul>
+                        Stay updated at every step until delivery.</p>
+                    </details>
+                    <details>
+                        <summary>How to cancel or modify an order?</summary>
+                        <p>
+                        <ul>
+                            <li>Step 1: Open “My Orders” in your profile.</li>
+                            <li>Step 2: Select the order you want to cancel or change.</li>
+                            <li>Step 3: If it is not yet shipped, click “Cancel” or “Edit.”</li>
+                            <li>Step 4: Confirm your request.</li>
+                            <li>Step 5: Refund (if any) will be processed as per policy.</li>
+                        </ul>
+                        Cancellation is only possible before dispatch.</p>
+                    </details>
+                    <details>
+                        <summary>What to do when the message "Invalid login MPIN" shows up?</summary>
+                        <p>Double-check the MPIN or use the "Forgot MPIN" option to reset it.</p>
+                    </details>
+                </div>
+
+                <!-- Officials Questions -->
+                <div class="faq-category" id="officials">
+                    <details>
+                        <summary>I can’t log into my account. What should I do?</summary>
+                        <p> <strong>Possible Causes</strong>
+                        <ul>
+                            <li>Incorrect email or password-Double :- check your login credentials</li>
+                            <li>Network issues :- Try resetting your password using “Forgot Password”</li>
+                            <li>Account not registered :- Ensure your internet connection is stable</li>
+                        </ul>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>My payment failed but money was deducted. What now?</summary>
+                        <p>
+                        <ul>
+                            <li>emporary server issue-> Wait for 24 hours – the amount is usually auto-refunded</li>
+                            <li>Bank-side delay-> Check your bank statement for refund confirmation</li>
+                            <li>Order not confirmed due to session timeout-> If not refunded, email us your transaction ID at: billing@poojastore.com</li>
+                            <li></li>
+                        </ul>
+                        </p>
+                    </details>
+                    <details>
+                        <summary> I didn’t receive my order. What should I do?</summary>
+                        <p>
+                        <ul>
+                            <li>Delivery delay -> Check your order status under “My Orders”</li>
+                            <li>Wrong address entered-> Confirm the delivery address is correct</li>
+                            <li>Courier issue-> Contact our delivery support at: delivery@poojastore.com with your Order ID</li>
+                            <li></li>
+                        </ul>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Product image is not loading properly.</summary>
+                        <p>
+                        <ul>
+                            <li>
+                                <strong>Possible Causes:</strong>
+                                <ul>
+                                    <li>Slow internet connection</li>
+                                    <li>App cache issue</li>
+                                    <li>Temporary server glitch</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Solution:</strong>
+                                <ul>
+                                    <li>Refresh the app</li>
+                                    <li>Clear cache from app settings</li>
+                                    <li>Restart the app or reinstall if needed</li>
+                                    <li>Still not loading? Report the issue via “Help & Support” section</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Why does data on the dashboard not match with the Beneficiary list?</summary>
+                        <p>Data mismatches can occur due to synchronization delays or pending updates in the system.</p>
+                    </details>
+                </div>
+
+                <!-- Poshan Tracker Application Questions -->
+                <div class="faq-category" id="poshan">
+                    <details>
+                        <summary>What can be marked in Daily tracking?</summary>
+                        <p>
+                        <p><strong>Q1: Can I buy products without signing up?</strong><br>
+                            A: No.</p>
+
+                        <p><strong>Q2: Do you deliver nationwide?</strong><br>
+                            A: Yes.</p>
+
+                        <p><strong>Q3: Can I return a product?</strong><br>
+                            A: Yes.</p>
+
+                        <p><strong>Q4: Is cash on delivery available?</strong><br>
+                            A: No.</p>
+
+                        <p><strong>Q5: Do you offer discounts?</strong><br>
+                            A: Yes.</p>
+
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Can I buy products without signing up?</summary>
+                        <p>No, you need to create an account to place an order.</p>
+                    </details>
+                    <details>
+                        <summary>Do you deliver products across India?</summary>
+                        <p>Yes, we deliver to most locations across India.</p>
+                    </details>
+                    <details>
+                        <summary>Can I return a product if I’m not satisfied?</summary>
+                        <p>Yes, you can return products within 7 days of delivery..</p>
+                    </details>
+                </div>
+
+                <!-- Miscellaneous Questions -->
+                <div class="faq-category" id="misc">
+                    <details>
+                        <summary>Is cash on delivery available?</summary>
+                        <p>No, currently we accept only online payments.</p>
+                    </details>
+                    <details>
+                        <summary>Do you offer discounts or promo codes?</summary>
+                        <p>Yes, we regularly offer discounts and promo codes.</p>
+                    </details>
+                    <details>
+                        <summary>Where can we download the Store Application?</summary>
+                        <p>The application can be downloaded from the Google Play Store for Android devices.</p>
+                    </details>
+                    <details>
+                        <summary>Can the Application be used by everyone?</summary>
+                        <p>The application is specifically designed for authorized all mandir/Gurudwara/Mashid  padari and officials.</p>
+                    </details>
+                </div>
+
+                <div class="faq-button">
+                    <a href="#">View All FAQs →</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php include 'footer.php'; ?>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="faq.js"></script>
 </body>
 
 </html>

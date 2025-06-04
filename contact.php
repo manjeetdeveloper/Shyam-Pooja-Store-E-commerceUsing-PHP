@@ -152,13 +152,13 @@ if (isset($_POST['submit-btn'])) {
 
     <div class="webyroot-section">
         <h1 class="webyroot-title">We are always ready to help you</h1>
-        <p class="webyroot-desc">At WebyRoot, we're always here to assist you with any sales inquiries, partnership opportunities, or career-related questions you may have. Our team of experts is dedicated to providing exceptional customer service and support, ensuring that you receive prompt and helpful responses to your inquiries.</p>
+        <p class="webyroot-desc">At Shri Shyam Pooja Store, we're always here to assist you with any sales inquiries, partnership opportunities, or career-related questions you may have. Our team of experts is dedicated to providing exceptional customer service and support, ensuring that you receive prompt and helpful responses to your inquiries.</p>
         
         <div class="webyroot-cards">
             <div class="webyroot-card">
                 <i class="bi bi-briefcase-fill"></i>
                 <h3>Sales Inquiry</h3>
-                <p>Get in touch with WebyRoot for all your sales inquiries. Our expert team is ready to assist you with customized solutions to meet your business needs.</p>
+                <p>Get in touch with Shri Shyam Pooja Store, for all your sales inquiries. Our expert team is ready to assist you with customized solutions to meet your business needs.</p>
             </div>
 
             <div class="webyroot-card">
@@ -170,7 +170,7 @@ if (isset($_POST['submit-btn'])) {
             <div class="webyroot-card">
                 <i class="bi bi-person-workspace"></i>
                 <h3>Career</h3>
-                <p>Join the WebyRoot team and take your career to the next level. We offer a supportive and dynamic work environment that fosters growth and creativity.</p>
+                <p>Join the Shri Shyam Pooja Store, team and take your career to the next level. We offer a supportive and dynamic work environment that fosters growth and creativity.</p>
             </div>
         </div>
     </div>

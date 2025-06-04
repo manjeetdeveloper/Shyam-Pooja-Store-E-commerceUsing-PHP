@@ -71,7 +71,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : '';
                     <p>Email: <span><?php echo $_SESSION['user_email']; ?></span></p>
                 </strong>
                 <form method="post">
-       ices             <button type="submit" name="logout" class="logout-btn">LOG OUT</button>
+                  <button type="submit" name="logout" class="logout-btn">LOG OUT</button>
                 </form>
                 <?php else: ?>
                 <p>Please <a href="login.php">login</a> or <a href="register.php">register</a></p>
