@@ -212,7 +212,7 @@ if(isset($_POST['update_product'])) {
         }
 
         .product-price::before {
-            content: '₹';
+            content: '';
             font-size: 1.2rem;
             color: var(--orange);
             font-weight: 600;

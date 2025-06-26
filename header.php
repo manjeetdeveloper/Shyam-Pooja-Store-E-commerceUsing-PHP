@@ -30,11 +30,11 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : '';
 
             <!-- Navigation Bar -->
             <nav class="navbar">
-                <a href="index.php">HOME</a>
-                <a href="about.php">ABOUT US</a>
-                <a href="shop.php">SHOP</a>
-                <a href="order.php">ORDERS</a>
-                <a href="contact.php">CONTACT</a>
+                <a href="index.php" class="hover-underline">HOME</a>
+                <a href="about.php" class="hover-underline">ABOUT US</a>
+                <a href="shop.php" class="hover-underline">SHOP</a>
+                <a href="order.php" class="hover-underline">ORDERS</a>
+                <a href="contact.php" class="hover-underline">CONTACT</a>
             </nav>
 
             <!-- Icons -->
@@ -71,7 +71,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : '';
                     <p>Email: <span><?php echo $_SESSION['user_email']; ?></span></p>
                 </strong>
                 <form method="post">
-       ices             <button type="submit" name="logout" class="logout-btn">LOG OUT</button>
+                  <button type="submit" name="logout" class="logout-btn">LOG OUT</button>
                 </form>
                 <?php else: ?>
                 <p>Please <a href="login.php">login</a> or <a href="register.php">register</a></p>
