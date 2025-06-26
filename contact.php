@@ -155,17 +155,10 @@ if (isset($_POST['submit-btn'])) {
         <p class="webyroot-desc">At Shri Shyam Pooja Store, we're always here to assist you with any sales inquiries, partnership opportunities, or career-related questions you may have. Our team of experts is dedicated to providing exceptional customer service and support, ensuring that you receive prompt and helpful responses to your inquiries.</p>
         
         <div class="webyroot-cards">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="img/undraw_calling_ieh0.png" alt="Sales Inquiry" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <i class="bi bi-briefcase-fill" style="font-size:40px;margin-bottom:20px;"></i>
-                        <h3>Sales Inquiry</h3>
-                        <p>Get in touch with Shri Shyam Pooja Store, for all your sales inquiries. Our expert team is ready to assist you with customized solutions to meet your business needs.</p>
-                    </div>
-                </div>
+            <div class="webyroot-card">
+                <i class="bi bi-briefcase-fill"></i>
+                <h3>Sales Inquiry</h3>
+                <p>Get in touch with WebyRoot for all your sales inquiries. Our expert team is ready to assist you with customized solutions to meet your business needs.</p>
             </div>
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -179,17 +172,11 @@ if (isset($_POST['submit-btn'])) {
                     </div>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="img/undraw_workspace_s6wf.png" alt="Career" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <i class="bi bi-person-workspace" style="font-size:40px;margin-bottom:20px;"></i>
-                        <h3>Career</h3>
-                        <p>Join the Shri Shyam Pooja Store, team and take your career to the next level. We offer a supportive and dynamic work environment that fosters growth and creativity.</p>
-                    </div>
-                </div>
+
+            <div class="webyroot-card">
+                <i class="bi bi-person-workspace"></i>
+                <h3>Career</h3>
+                <p>Join the WebyRoot team and take your career to the next level. We offer a supportive and dynamic work environment that fosters growth and creativity.</p>
             </div>
         </div>
     </div>

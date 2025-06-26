@@ -345,111 +345,19 @@ if (isset($_POST['add_to_cart'])) {
     </div>
 
     <div class="promo-container">
-        <div class="promo-card">
-            <div class="promo-image"></div>
-            <div class="promo-content">
-                <span>Fill your space with serenity and positivity</span>
-                <h2>Explore Agarbattis</h2>
-                <p><strong>Hari Darshan Agarbatti</strong> fills your space with a divine fragrance, ideal for <strong>meditation</strong>, <strong>prayers</strong>, and creating a peaceful, spiritual ambiance. Made with natural ingredients, it enhances <strong>positivity</strong>, tranquility, and serenity in your home or temple.</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
+    <div class="promo-card">
+      <div class="promo-image"></div>
+      <div class="promo-content">
+        <span>Fill your space with serenity and positivity</span>
+        <h2>Explore Agarbattis</h2>
+        <p><strong>Hari Darshan Agarbatti</strong> fills your space with a divine fragrance, ideal for <strong>meditation</strong>, <strong>prayers</strong>, and creating a peaceful, spiritual ambiance. Made with natural ingredients, it enhances <strong>positivity</strong>, tranquility, and serenity in your home or temple.</p>
+        <button class="shop-btn">Shop Now</button>
+      </div>
     </div>
-
-
-    <div class="quality-services">
-        <h1 class="title hover-underline">Quality Services</h1>
-        <div class="services-grid">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="img/Pure and Authentic Products.png" alt="Pure and Authentic Products" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="service-icon">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-                        <h3>Pure and Authentic Products</h3>
-                        <ul>
-                            <li>Certified and Lab-Tested Products</li>
-                            <li>100% Natural Ingredients</li>
-                            <li>Handpicked by Experts</li>
-                            <li>Sourced from Trusted Vendors</li>
-                            <li>No Artificial Fragrance or Colors</li>
-                            <li>Fresh Stock Only</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="img/Affordable Pricing.png" alt="Affordable Pricing" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="service-icon">
-                            <i class="bi bi-currency-rupee"></i>
-                        </div>
-                        <h3>Affordable Pricing</h3>
-                        <ul>
-                            <li>Best Price Guarantee</li>
-                            <li>No Hidden Charges</li>
-                            <li>Combo Offers & Discounts</li>
-                            <li>Festival Sale Offers</li>
-                            <li>Value for Money Products</li>
-                            <li>Free Delivery on Minimum Order</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="img/undraw_order-delivered_puaw.png" alt="Fast and Safe Delivery" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="service-icon">
-                            <i class="bi bi-truck"></i>
-                        </div>
-                        <h3>Fast and Safe Delivery</h3>
-                        <ul>
-                            <li>Pan-India Delivery Network</li>
-                            <li>Same-Day or Next-Day Dispatch</li>
-                            <li>Real-Time Order Tracking</li>
-                            <li>Delivery Updates via SMS/Email</li>
-                            <li>Free Delivery on Eligible Orders</li>
-                            <li>Trusted Courier Partners</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="img/undraw_stripe-payments_g8qn.png" alt="Secure Online Payments" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="service-icon">
-                            <i class="bi bi-cart-check"></i>
-                        </div>
-                        <h3>Secure Online Payments</h3>
-                        <ul>
-                            <li>Multiple Payment Options(UPI,Net BAnking)</li>
-                            <li>Razorpay / Paytm / Stripe Integration</li>
-                            <li>One-Click Checkout Process</li>
-                            <li>No Data Sharing with Third Parties</li>
-                            <li>Cash on Delivery (COD) Available</li>
-                            <li>100% Payment Protection Guarantee</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ------------------Newsletter -------------------->
-
+  </div>
+    
+    
+   
     <div class="newslatter">
         <h1 class="title">Join Our To Newslatter</h1>
         <p>Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more.
